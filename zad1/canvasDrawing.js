@@ -15,23 +15,18 @@
             */
             graphics.fillRect(150, 100, 100, 100);
 
-            // Set border color and thickness
             graphics.strokeStyle = "black";
             graphics.lineWidth = 2.5;
 
-            // Draw the top border
             graphics.beginPath();
-            graphics.moveTo(150, 100);          // Top-left corner
-            graphics.lineTo(250, 100);          // Top-right corner
+            graphics.moveTo(150, 100);
+            graphics.lineTo(250, 100);
 
-            // Draw the right border
-            graphics.lineTo(250, 200);          // Bottom-right corner
+            graphics.lineTo(250, 200);
 
-            // Draw the left border
-            graphics.moveTo(150, 100);          // Back to top-left
-            graphics.lineTo(150, 200);          // Bottom-left corner
+            graphics.moveTo(150, 100);
+            graphics.lineTo(150, 200);
 
-            // Stroke all the lines
             graphics.stroke();
 
             /*
@@ -43,14 +38,14 @@
 
             // Top border (with a gap in the center)
             graphics.moveTo(50, 200);
-            graphics.lineTo(150, 200);  // Left part of top border
-            graphics.moveTo(250, 200);  // Right part of top border (after gap)
+            graphics.lineTo(150, 200);
+            graphics.moveTo(250, 200);
             graphics.lineTo(350, 200);
 
             // Bottom border (with a gap in the center)
             graphics.moveTo(50, 300);
-            graphics.lineTo(150, 300);  // Left part of bottom border
-            graphics.moveTo(250, 300);  // Right part of bottom border (after gap)
+            graphics.lineTo(150, 300);
+            graphics.moveTo(250, 300);
             graphics.lineTo(350, 300);
 
             // Left border (full)
@@ -68,20 +63,19 @@
             */
             graphics.fillRect(150, 300, 100, 100);
 
-            // Draw the left, right, and bottom borders of the third rectangle
             graphics.beginPath();
 
             // Left border
-            graphics.moveTo(150, 300); // Top-left corner
-            graphics.lineTo(150, 400); // Bottom-left corner
+            graphics.moveTo(150, 300);
+            graphics.lineTo(150, 400);
 
             // Right border
-            graphics.moveTo(250, 300); // Top-right corner
-            graphics.lineTo(250, 400); // Bottom-right corner
+            graphics.moveTo(250, 300);
+            graphics.lineTo(250, 400);
 
             // Bottom border
-            graphics.moveTo(150, 400); // Left-bottom corner
-            graphics.lineTo(250, 400); // Right-bottom corner
+            graphics.moveTo(150, 400);
+            graphics.lineTo(250, 400);
 
             graphics.stroke();
 
@@ -133,7 +127,7 @@
             graphics.fillCircle(180, 230, 5);  
             graphics.fillCircle(220, 230, 5);  
 
-            // Glows (using rgba for transparency)
+            // Glows
             graphics.fillStyle = "rgba(250, 250, 250, 0.89)";
             graphics.fillCircle(178, 228, 2);  
             graphics.fillCircle(218, 228, 2);  

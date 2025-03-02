@@ -7,9 +7,7 @@
                 This function clears the entire canvas when being evoked
             */
             function clearCanvas() {
-                // Clears the entire canvas by filling it with a white background
                 graphics.clearRect(0, 0, canvas.width, canvas.height);
-                // Optionally, you can reset the background color to white or any other color:
                 graphics.fillStyle = "white";
                 graphics.fillRect(0, 0, canvas.width, canvas.height);
             }                
@@ -80,37 +78,40 @@
                     // Sprawdzamy wybrany kolor
                     if (colorChoice == 0) {
                         graphics.fillStyle = randomColorString();
-                    } else if (colorChoice == 1) {
+                    } 
+                    else if (colorChoice == 1) {
                         graphics.fillStyle = "red";
-                    } else if (colorChoice == 2) {
+                    } 
+                    else if (colorChoice == 2) {
                         graphics.fillStyle = "green";
-                    } else if (colorChoice == 3) {
+                    } 
+                    else if (colorChoice == 3) {
                         graphics.fillStyle = "blue";
-                    } else if (colorChoice == 4) {
+                    }
+                    // Added new color to options 
+                    else if (colorChoice == 4) {
                         graphics.fillStyle = "yellow";
                     }
                 
-                    // Sprawdzamy wybrane narzędzie
                     var toolChoice = document.getElementById("toolChoice").value;
                     if (toolChoice == 0) {
-                        // Rysowanie kwadratów
+                        // Square drawing
                         graphics.fillRect(x - 20, y - 20, 40, 40);
                         graphics.strokeRect(x - 20, y - 20, 40, 40);
-                    } else if (toolChoice == 1) {
-                        // Rysowanie wielokątów
-                        var sides = 5; // Liczba boków (np. pięciokąt)
-                        var radius = 20; // Promień okręgu opisującego wielokąt
+                    } 
+                    else if (toolChoice == 1) {
+                        // Polygon drawing
+                        var sides = 5;
+                        var radius = 20;
                         var angle = Math.PI * 2 / sides;
                         var points = [];
-                        
-                        // Obliczamy współrzędne punktów wielokąta
+
                         for (var i = 0; i < sides; i++) {
                             var px = x + radius * Math.cos(i * angle);
                             var py = y + radius * Math.sin(i * angle);
                             points.push(px, py);
                         }
                 
-                        // Rysujemy wielokąt
                         graphics.fillPoly(...points);
                         graphics.strokePoly(...points);
                     }
